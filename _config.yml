@@ -86,4 +86,4 @@ backup:
     type: git
     theme: next,landscape
     repository:
-       github: git@github.com:wflonglong/wflonglong.github.io.git,master
+       github: git@github.com:wflonglong/wflonglong.github.io.git,hexo
