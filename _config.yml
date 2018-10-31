@@ -6,14 +6,14 @@
 title: wf等待花开
 subtitle:
 description:
-keywords:
+keywords: 前端
 author: wf等待花开
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://github.com/wflonglong
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
