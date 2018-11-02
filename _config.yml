@@ -84,6 +84,7 @@ deploy:
 
 backup:
     type: git
+    message: hexo blog source
     theme: next,landscape
     repository:
        github: git@github.com:wflonglong/wflonglong.github.io.git,hexo
