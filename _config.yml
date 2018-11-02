@@ -82,6 +82,7 @@ deploy:
   repository: git@github.com:wflonglong/wflonglong.github.io.git
   branch: master
 
+## https://www.npmjs.com/package/hexo-git-backup
 backup:
     type: git
     message: hexo blog source
