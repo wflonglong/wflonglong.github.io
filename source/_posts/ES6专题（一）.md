@@ -14,7 +14,7 @@ let之前用的比较多，很多时候在{}内用let声明一个变量，只是
 js的作用域有： 全局作用域、函数作用域、块作用域（ES6引入）。
 var定义的变量, 作用范围比较大，作用域是整个封闭函数，不可以跨函数作用域访问；
 let定义的变量，作用范围比较小，属于块级作用域，即{}内，不可以跨块作用域访问。
-```js
+```javascript
 {
     var a = 1;
     console.log(a); // 1
@@ -35,8 +35,9 @@ console.log(b); // b is not defined    不可以跨函数作用域访问
 }
 console.log(c); // 报错   c is not defined
 ```
+
 当var和let同时出现的时候，有可能会相互影响。
-```js
+```javascript
 var a = 1;
 {
   console.log(a);   // 1    
@@ -50,9 +51,10 @@ var b = 1;
   let b = 2;
 }
 ```
+
 #### 声明提升
 var 会声明提升，let不会提升。
-```js
+```javascript
 console.log(a); // a is is not defined
 console.log(b); // undefined   b声明提升 不会报错
 var b = 1;
@@ -70,11 +72,12 @@ let b = 1;
 let b = 2;  // Identifier 'b' has already been declared 
             // let重复定义的话会报错
 ```
-#### 关于闭包
 
+#### 关于闭包
+关于闭包，面试的时候经常被问到。
 ### const
 const 和let差不多，不允许重复赋值。
-```js
+```javascript
 const a = 1;
 const a = 2;    // Identifier 'a' has already been declared
 
