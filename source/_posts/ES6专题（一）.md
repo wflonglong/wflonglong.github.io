@@ -75,8 +75,11 @@ let b = 2;  // Identifier 'b' has already been declared
 
 #### 关于闭包
 关于闭包，面试的时候经常被问到。
+......
+闭包暂时没想好，后期再往上填吧。
 ### const
 const 和let差不多，不允许重复赋值。
+给const声明的变量重新赋值的时候会报错。
 ```javascript
 const a = 1;
 const a = 2;    // Identifier 'a' has already been declared
@@ -89,12 +92,51 @@ c.name = 'tom';
 c.job = 'fe';
 console.log(c); // {name: 'tom', job: 'fe'}
 ```
-
+const声明的引用型变量，可以改变其值，只要不更改该变量在内存中的地址。
 
 ### 箭头函数
+一般是这样写。
+```javascript
+(x, y) => {
+    return x + y;
+}
+// 类似于
+function (x, y) {
+    return x + y;
+}
+```
+用起来挺好用，比之前的function定义简便了许多。但是箭头函数还可以更简洁。
+1、 当参数是一个的时候，可以不用()，当参数不是一个，就必须加()。
+```javascript
+// 一个参数
+x => {
+    return x * x;
+}
+// 没有参数
+() => {
+    
+}
+```
+2、 当函数体内只有一条语句时，可以省略return 和{}， 当返回对象时要()包裹。
+```javascript
+(x, y) => x * x + y * y;
 
+// 类似于
+function (x, y) {
+    return x * x + y * y;
+}
 
-
+(x, y) => {
+    return {
+        a: x,
+        b: y
+    }
+}
+// 简写为
+(x, y) => ({a: x, b: y});
+```
+#### 箭头函数中this的指向
+这个跟普通的函数不一样。普通函数谁调用我，this就指向谁。箭头函数内的this，我觉得应该是和箭头函数外部的this指向一致。
 ### 模板字符串
 
 
