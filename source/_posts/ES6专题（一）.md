@@ -73,10 +73,6 @@ let b = 2;  // Identifier 'b' has already been declared
             // let重复定义的话会报错
 ```
 
-#### 关于闭包
-关于闭包，面试的时候经常被问到。
-......
-闭包暂时没想好，后期再往上填吧。
 ### const
 const 和let差不多，不允许重复赋值。
 给const声明的变量重新赋值的时候会报错。
