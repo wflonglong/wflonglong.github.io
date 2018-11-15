@@ -132,9 +132,38 @@ function (x, y) {
 (x, y) => ({a: x, b: y});
 ```
 #### 箭头函数中this的指向
-这个跟普通的函数不一样。普通函数谁调用我，this就指向谁。箭头函数内的this，我觉得应该是和箭头函数外部的this指向一致。
+这个跟普通的函数不一样。
+普通函数谁调用我，this就指向谁。
+箭头函数内的this，我觉得应该是和箭头函数外部的this指向一致。
 ### 模板字符串
-
+过去如果我们要拼接一串字符串，可能会比较麻烦。比如：
+```javascript
+var nameList = ['鸣人', '佐助',  '雏田', '小樱', '宁次', '天天', '红豆'];
+var str1 = 
+    '<ul>' +
+        '<li>' + nameList[0] + '</li>' +
+        '<li>' + nameList[1] + '</li>' +
+        '<li>' + nameList[2] + '</li>' +
+        '<li>' + nameList[3] + '</li>' +
+        '<li>' + nameList[4] + '</li>' +
+        '<li>' + nameList[5] + '</li>' +
+        '<li>' + nameList[6] + '</li>' +
+    '</ul>';
+// 这样拼起来会比较麻烦，而且很容易出错。
+// 使用模板字符串就比较方便，直接在``中间写，如果有变量，则配合使用${}.
+var str2 = 
+`
+    <ul>
+        <li>${nameList[0]}</li>
+        <li>${nameList[1]}</li>
+        <li>${nameList[2]}</li>
+        <li>${nameList[3]}</li>
+        <li>${nameList[4]}</li>
+        <li>${nameList[5]}</li>
+        <li>${nameList[6]}</li>
+    </ul>
+`;
+```
 
 
 ### 解析结构
