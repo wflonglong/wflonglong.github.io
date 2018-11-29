@@ -39,10 +39,25 @@ let { stat, exists, readFile } = require('fs');
 ```
 使用export提供对外接口
 
+## 对象与Class
+ES6针对对象增加了一些简化的写法。
+```javascript
+// 属性和变量同名时
+let name = 'jerry';
+const people = {name};
+// 等价于ES5
+var people = {
+    name: name
+}
+```
+Class以及继承
 
+
+后续要补充的：
 ES6的Promise与JQuery的Promise
-ES6模块化
+ES6模块化 和 AMD CMD
 事件循环机制
+执行上下文等
 
 
 
