@@ -38,7 +38,9 @@ console.log(b); // b is not defined    不可以跨函数作用域访问
 console.log(c); // 报错   c is not defined
 ```
 
-当var和let同时出现的时候，有可能会相互影响。
+#### 暂时性死区
+只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。
+
 ```javascript
 var a = 1;
 {
@@ -192,13 +194,18 @@ let {length} = 'hello'; // length = 5;
 ...后面跟数组，是把数组打散。
 ```javascript
 let arr1 = [1, 2, 3];
-let arr2 = [...arr1, 4, 5]; // arr2 = [1, 2, 3, 4, 5];
+let arr2 = [...arr1, 4, 5]; // arr2 = [1, 2, 3, 4, 5];       []内取的是数组的值
 let arr3 = [];
 arr3.push(...arr1, 4);  // arr3 = [1, 2, 3, 4];
+let foo = {...arr1 };  // foo = {0: 1, 1: 2, 2: 3};         {}内取的是数组的键值对
 ```
 ...后面跟形参变量
 ```javascript
 function fun(a, b, ...c){}
 fun(1, 2, 3, 4, 5); // c = [3, 4, 5];
+
+function push(arr, ...items) {
+  arr.push(...items);
+}
 ```
 

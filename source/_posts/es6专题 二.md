@@ -51,7 +51,24 @@ var people = {
 }
 ```
 Class以及继承
+```javascript
+class City {
+  constructor(city) {
+     this.city = city;
+  }
+  sayHello() {
+    return `hello,欢迎来到${ this. city}。 `;
+  }
+}
+class People extends City {
+    constructor(city, name, age) {
+        super(city);
+        this.name = name;
+        this.age = age;
+    }
+}
 
+```
 
 后续要补充的：
 ES6的Promise与JQuery的Promise
