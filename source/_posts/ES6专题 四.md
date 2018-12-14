@@ -1,9 +1,11 @@
 ---
-title: ES7和ES8
+layout: ES6专题
+title: ES6专题 四
 date: 2018-11-28 14:46:41
 tags: 前端
 ---
-## ES7(ES2016)新特性
+ES2016新特性  ES2017新特性
+## ES2016新特性
 1.[Array.prototype.includes](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 2.[Exponentiation Operator(求冥运算)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#幂_(**))
  ### Array.prototype.includes
@@ -33,7 +35,7 @@ js里 NaN === NaN 为false。
 Math.pow(2, 3) // 8
 ```
 
-## ES8(ES2017)新特性
+## ES2017新特性
 1.异步函数（Async Functions）
 2.共享内存和原子
 3.Object.values/Object.entries

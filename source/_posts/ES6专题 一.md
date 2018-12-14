@@ -1,4 +1,5 @@
 ---
+layout: ES6专题
 title: ES6专题 一 
 date: 2018-11-08 19:55:13
 tags: 前端
@@ -93,6 +94,24 @@ c.job = 'fe';
 console.log(c); // {name: 'tom', job: 'fe'}
 ```
 const声明的引用型变量，可以改变其值，只要不更改该变量在内存中的地址。
+很多时候需要不能更改变量，包括其属性等。
+```javascript
+// 禁止改变对象所有属性
+Object.deepFreeze = function(obj) {
+    let propNames = Object.getOwnPropertyNames(obj);
+    propNames.forEach(name => {
+        if (typeof obj[name] == 'object' && obj[name] !== null) {
+            Object.deepFreeze(obj[name]);
+        }
+    })
+    return Object.freeze(obj);
+}
+const obj1 = Object.deepFreeze({
+    a: {},
+    b: 123
+});
+
+```
 
 ### 箭头函数
 一般是这样写。
@@ -208,4 +227,6 @@ function push(arr, ...items) {
   arr.push(...items);
 }
 ```
+数组去重
+[...new Set(array)]
 
