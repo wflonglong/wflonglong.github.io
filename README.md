@@ -1,7 +1,7 @@
 # wflonglong.github.io
 我的技术博客，欢迎访问https://wflonglong.github.io。
 hexo分支主要用来备份源文件，包括主题等，master分支存放生成后文件，便于访问。
-# 使用
+## 使用
 ```
 hexo b
 ```
